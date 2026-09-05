@@ -1,66 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
-/**
- *
- * @author KHAN GADGET
- */
+package oop_concept;
+
+
 public class Test {
-      public static void main(String[] args)
-      {
-          Shape s1 = new Circle("Red", 2.2);
-          Shape s2 = new Rectangle("Yellow", 2, 4);
-
-          System.out.println(s1.toString());
-          System.out.println(s2.toString());
-      }
- }
- abstract class Shape{
-     String color;
-     abstract double area();
-     public abstract String toString();
-     public Shape(String color){
-         System.out.println("Abstract Shape constructor called");
-         this.color = color;
-     }
-     public String getColor(){
-         return color;
-     }
- }
- class Circle extends Shape{
-     double radius;
-     public Circle(String color, double radius){
-         // calling Shape constructor
-         super(color);
-         this.radius = radius;
-         System.out.println("Circle constructor called");
-     }
-     double area(){
-         return Math.PI * Math.pow(radius, 2);
-     }
-     public String toString(){
-         return "Circle color is " + super.getColor()
-             + " and area is : " + area();
-     }
- }
- class Rectangle extends Shape{
-     double length;
-     double width;
-     public Rectangle(String color, double length,
-                       double width)
-     {
-         // calling Shape constructor
-         super(color);
-         this.length = length;
-         this.width = width;
-         System.out.println("Rectangle constructor called");
-     }
-     double area(){ return length * width; }
-     public String toString()
-     {
-         return "Rectangle color is " + super.getColor()
-                + " and area is : " + area();
-     }
- }
+    
+    public static void main(String[] args){
+        Student s1, s2;
+        s1 = new Student();
+        s1.name = "Masum Billah";
+        s1.id = 1;
+        s1.result =  (float) 3.82;
+        
+        System.out.println("Name: "+s1.name);
+        System.out.println("ID: "+s1.id);
+        System.out.println("Result: "+s1.result);
+        
+        s2 = new Student();
+        s2.name = "Mezbaul Hoque Mahir";
+        s2.id = 28;
+        s2.result =  (float) 3.62;
+        
+        System.out.println("Name: "+s2.name);
+        System.out.println("ID: "+s2.id);
+        System.out.println("Result: "+s2.result);
+                
+    }
+}
